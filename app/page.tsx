@@ -1,15 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import { SketchMic, SketchNote, SketchTicket } from "@/components/icons";
+import { SketchMic, SketchNote, SketchTicket } from "../components/icons";
 import { useState } from "react";
 
 export default function Page() {
   const [email, setEmail] = useState("");
 
   const features = [
-    { icon: <SketchMic className="w-9 h-9" />, title: <>Rauf auf die <span className=\"text-[var(--neon-pink)]\">Leinwand</span>!</>, desc: "Großer Screen, laute Stimme, gute Laune." },
-    { icon: <SketchNote className="w-9 h-9" />, title: <>Songs, <span className=\"text-[var(--neon-blue)]\">Songs</span>, Songs</>, desc: "Such dir was aus und sing los – spontan & zusammen." },
-    { icon: <SketchTicket className="w-9 h-9" />, title: <>Eintritt = <span className=\"text-[var(--neon-yellow)]\">Getränk</span></>, desc: "Dein Ticket kannst du komplett für ein Drink einlösen." },
+    { icon: <SketchMic className="w-9 h-9" />, title: <>Rauf auf die <span className="text-[var(--neon-pink)]">Leinwand</span>!</>, desc: "Großer Screen, laute Stimme, gute Laune." },
+    { icon: <SketchNote className="w-9 h-9" />, title: <>Songs, <span className="text-[var(--neon-blue)]">Songs</span>, Songs</>, desc: "Such dir was aus und sing los – spontan & zusammen." },
+    { icon: <SketchTicket className="w-9 h-9" />, title: <>Eintritt = <span className="text-[var(--neon-yellow)]">Getränk</span></>, desc: "Dein Ticket kannst du komplett für ein Getränk einlösen." },
   ];
 
   return (
