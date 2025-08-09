@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --bg-dark: #0b1b36; }
+:root { --bg-dark: #0b1b36; } /* dunkles Blau */
 html, body { height: 100%; }
 
+/* Rausch-Overlay auf allen Seiten */
 body {
   background-color: var(--bg-dark);
   background-image:
     radial-gradient(1200px 600px at 20% 0%, rgba(0,37,84,0.25), transparent 60%),
     url('/noise.png');
   background-repeat: no-repeat, repeat;
-  background-size: auto, 512px 512px;
+  background-size: auto, 512px 512px; /* Noise kachelt sauber */
   color: #e5e7eb;
 }
