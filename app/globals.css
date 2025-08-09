@@ -2,16 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --bg-dark: #0b1b36; } /* dunkles Blau */
+/* Farben */
+:root {
+  --blue-deep: #0b1b36;
+  --neon-blue: #22d3ee;
+  --neon-pink: #ff4d9e;
+  --neon-yellow: #ffd84d;
+}
+
 html, body { height: 100%; }
 
-/* Rausch-Overlay auf allen Seiten */
+/* Mehrlagiger Party-Hintergrund */
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--blue-deep);
   background-image:
-    radial-gradient(1200px 600px at 20% 0%, rgba(0,37,84,0.25), transparent 60%),
-    url('/noise.png');
-  background-repeat: no-repeat, repeat;
-  background-size: auto, 512px 512px; /* Noise kachelt sauber */
-  color: #e5e7eb;
+    url('/doodles.svg'),
+    url('/noise.png'),
+    url('/club-bg.png'),
+    radial-gradient(1200px 600px at 20% 0%, rgba(0,37,84,0.25), transparent 60%);
+  background-repeat: repeat, repeat, no-repeat, no-repeat;
+  background-size: auto, 512px 512px, cover, auto;
+  background-position: top left, 0 0, center, top left;
+  background-attachment: scroll, scroll, fixed, scroll;
 }
+
+/* Sketchy Buttons */
+.btn-sketch {
+  @apply inline-flex items-center gap-2 rounded-[16px] px-5 py-3 font-medium text-slate-900 transition-transform;
+  background: linear-gradient(135deg, var(--neon-yellow), var(--neon-pink));
+  box-shadow: 0 2px 0 #00000066, 2px 2px 0 #00000033, inset 0 0 0 2px #00000055;
+}
+.btn-sketch:active { transform: translateY(1px); }
+
+/* Badge / Pill */
+.pill { @apply inline-block rounded-full px-3 py-1 text-sm; background: #00000066; border: 1px dashed #ffffff44; }
+
+/* Card im Dark-Party-Style */
+.card {
+  @apply rounded-3xl border p-6;
+  border-color: #1f2937; /* slate-800 */
+  background: rgba(2, 6, 23, 0.55); /* slate-950/55 */
+  box-shadow: 0 1px 0 #ffffff08 inset, 0 10px 30px #00000055;
+}
+
+/* Wackel-Animationen */
+@keyframes wobble { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+.wobble { animation: wobble 2.2s ease-in-out infinite; }
+
+@keyframes floaty { 0% { transform: translateY(0); } 50% { transform: translateY(-6px); } 100% { transform: translateY(0);} }
+.floaty { animation: floaty 3s ease-in-out infinite; }

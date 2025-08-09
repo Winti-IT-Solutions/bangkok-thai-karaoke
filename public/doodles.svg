@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 140q40 -60 120 -10t160 0" />
+    <path d="M1400 120 q-60 40 -100 80 q40 40 120 30" />
+    <path d="M200 720 q60 -40 120 0 t120 0" />
+    <path d="M1300 700 q-40 60 -120 20 t-140 -10" />
+    <!-- stars -->
+    <path d="M320 240 l8 18 l20 2 l-15 12 l5 20 l-18 -10 l-18 10 l5 -20 l-15 -12 l20 -2z"/>
+    <path d="M1260 260 l8 18 l20 2 l-15 12 l5 20 l-18 -10 l-18 10 l5 -20 l-15 -12 l20 -2z"/>
+    <!-- notes -->
+    <path d="M520 220 q10 -40 40 -20 v60 q-10 20 -28 22 q-18 2 -12 -12 q8 -12 20 -10" />
+    <circle cx="560" cy="292" r="12" />
+    <path d="M1040 220 q10 -40 40 -20 v60 q-10 20 -28 22 q-18 2 -12 -12 q8 -12 20 -10" />
+    <circle cx="1080" cy="292" r="12" />
+  </g>
+</svg>
