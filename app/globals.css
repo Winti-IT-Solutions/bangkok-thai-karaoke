@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --bg: theme(colors.slate.50); }
+:root { --bg-dark: #0b1b36; }
 html, body { height: 100%; }
+
 body {
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(0,37,84,0.25), transparent 60%),
-              linear-gradient(to bottom, var(--bg), white);
+  background-color: var(--bg-dark);
+  background-image:
+    radial-gradient(1200px 600px at 20% 0%, rgba(0,37,84,0.25), transparent 60%),
+    url('/noise.png');
+  background-repeat: no-repeat, repeat;
+  background-size: auto, 512px 512px;
+  color: #e5e7eb;
 }
